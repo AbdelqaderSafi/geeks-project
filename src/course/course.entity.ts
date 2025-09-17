@@ -1,4 +1,4 @@
-import { IBaseData } from "../../common/repos/types";
+import { IBaseData } from "../shared/types";
 
 export interface ICourse extends IBaseData {
   title: string;

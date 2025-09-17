@@ -1,5 +1,5 @@
-import baseRepo from "../../common/repos/baseRepo";
-import { USERS_DATA } from "./dummy";
+import baseRepo from "../shared/baseRepo";
+import { USERS_DATA } from "./user.data";
 import { IUser } from "./user.entity";
 
 class UserRepo extends baseRepo<IUser> {

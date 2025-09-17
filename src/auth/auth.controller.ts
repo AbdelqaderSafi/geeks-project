@@ -12,7 +12,7 @@ import {
   signUpSchema,
 } from "../../validation/schemas/auth.schemas";
 import authService from "./auth.service";
-import userService from "../user/user.service";
+import userService from "../../src/user/user.service";
 import { createArgon2Hash } from "../../utils/hash.util";
 import { removeKey } from "../../utils/object.util";
 import CustomError from "../../Error/customError";

@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 import { BodyObject, StatusCodes } from "../../@types/index";
-import { IBaseData } from "../../common/repos/types";
+import { IBaseData } from "../shared/types";
 import { removeKey } from "../../utils/object.util";
 import { createArgon2Hash } from "../../utils/hash.util";
 import CustomError from "../../Error/customError";
-import userService from "../user/user.service";
-import { IUser } from "../user/user.entity";
+import userService from "./user.service";
+import { IUser } from "./user.entity";
 import { zodValidation } from "../../validation/utils/zodValidation";
 import {
   createSchema,

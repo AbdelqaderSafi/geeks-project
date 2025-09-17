@@ -1,5 +1,5 @@
 import { TRoles } from "../../@types";
-import { IBaseData } from "../../common/repos/types";
+import { IBaseData } from "../shared/types";
 
 export interface IUser extends IBaseData {
   name: string;

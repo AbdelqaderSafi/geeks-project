@@ -15,6 +15,14 @@ class CourseController {
   getCourses(req: Request, res: Response) {
     const courses = courseService.getCourses();
 
+    if (courses.length === 0) {
+      return res.success({
+        success: true,
+        data: courses,
+        statusCode: StatusCodes.HttpSuccess.NoContent,
+        message: "There are no courses yet",
+      });
+    }
     return res.success({
       success: true,
       data: courses,

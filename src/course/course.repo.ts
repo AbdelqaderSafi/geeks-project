@@ -1,6 +1,6 @@
-import BaseRepo from "../../common/repos/baseRepo";
+import BaseRepo from "../shared/baseRepo";
 import { ICourse } from "./course.entity";
-import { COURSES_DATA } from "./dummy";
+import { COURSES_DATA } from "./course.data";
 
 class CourseRepo extends BaseRepo<ICourse> {
   constructor() {

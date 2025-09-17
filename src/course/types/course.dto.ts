@@ -1,4 +1,4 @@
-import { IBaseData } from "../../../common/repos/types";
+import { IBaseData } from "../../shared/types";
 import { ICourse } from "../course.entity";
 
 export type CreatCourseDTO = Omit<ICourse, keyof IBaseData>;

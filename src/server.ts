@@ -1,14 +1,16 @@
+import "dotenv/config";
+import { getEnvOrThrow } from "../utils/util";
 import express, { NextFunction, RequestHandler } from "express";
 import { Request, Response } from "express";
-import { authRouter } from "./module/auth/auth.routes";
-import { responseUnifider } from "./middlewares/responseUndifider";
-import { userRouter } from "./module/user/user.routes";
-import CourseRouter from "./module/course/course.routes";
-import { errorHandler } from "./Error/utils/errorHandler";
+import { authRouter } from "./auth/auth.routes";
+import { responseUnifider } from "../middlewares/responseUndifider";
+import { userRouter } from "./user/user.routes";
+import CourseRouter from "./course/course.routes";
+import { errorHandler } from "../Error/utils/errorHandler";
 
-const port = process.env.PORT;
+const PORT = getEnvOrThrow("PORT");
 
-const app = express();
+export const app = express();
 app.use(express.json());
 app.use(express.urlencoded());
 
@@ -28,5 +30,6 @@ app.use((err: unknown, req: Request, res: Response, next: NextFunction) => {
   console.log(err);
   errorHandler(err, res);
 });
-
-app.listen(port);
+if (process.env.NODE_ENV !== "test") {
+  app.listen(PORT);
+}
