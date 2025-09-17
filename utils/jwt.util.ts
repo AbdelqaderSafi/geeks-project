@@ -1,7 +1,8 @@
 import * as jwt from "jsonwebtoken";
 import { TJwtPayload } from "../@types";
+import { getEnvOrThrow } from "./util";
 
-const secret = process.env.JWT_SECRET;
+const secret = getEnvOrThrow("JWT_SECRET");
 
 export const generateToken = (payload: TJwtPayload) => {
   return jwt.sign(payload, secret);

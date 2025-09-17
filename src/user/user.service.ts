@@ -1,4 +1,4 @@
-import { IBaseData } from "../../common/repos/types";
+import { IBaseData } from "../shared/types";
 import { IUser } from "./user.entity";
 import userRepo from "./user.repo";
 import CustomError from "../../Error/customError";

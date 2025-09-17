@@ -1,4 +1,4 @@
-import { IUser } from "../../user/user.entity";
+import { IUser } from "../../../src/user/user.entity";
 
 export type TLoginDTO = Pick<IUser, "email" | "password">;
 

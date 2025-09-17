@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { ICourse } from "../../module/course/course.entity";
+import { ICourse } from "../../src/course/course.entity";
 
 export const courseSchema = z.object({
   id: z.string(),

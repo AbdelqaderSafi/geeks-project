@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { IUser } from "../../module/user/user.entity";
+import { IUser } from "../../src/user/user.entity";
 import { ERoles } from "../../@types/index";
 
 export const userSchema = z.object({

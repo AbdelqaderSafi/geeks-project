@@ -3,7 +3,7 @@ import CustomError from "../../Error/customError";
 import { createArgon2Hash, verifyArgon2Hash } from "../../utils/hash.util";
 import { generateToken } from "../../utils/jwt.util";
 import { removeKey } from "../../utils/object.util";
-import userService from "../user/user.service";
+import userService from "../../src/user/user.service";
 import { TLoginDTO, TSignUpDTO } from "./types/auth.dto";
 
 class AuthService {

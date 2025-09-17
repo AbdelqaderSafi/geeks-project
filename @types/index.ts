@@ -1,5 +1,5 @@
 // import CustomError from "@/Error/customError";
-import { IUser } from "../module/user/user.entity";
+import { IUser } from "../src/user/user.entity";
 
 enum EModules {
   AUTH = "auth",
@@ -69,9 +69,10 @@ export type TJwtPayload = Pick<IUser, "email" | "name" | "role"> & {
   sub: string;
 };
 
-interface IEnv {
-  PORT: number;
+export interface IEnv {
+  PORT: string;
   JWT_SECRET: string;
+  NODE_ENV: "devlopment" | "production" | "test";
 }
 
 declare global {
